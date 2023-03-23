@@ -10,10 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EmployeeView">
+<AnchorPane prefHeight="400.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.little_john.controller.EmployeeViewController">
    <children>
-      <Button layoutX="21.0" layoutY="23.0" mnemonicParsing="false" text="+ NEW Employee" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="btnNewEmployee" layoutX="21.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnNewEmployeeOnAction" text="+ NEW Employee" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <Label layoutX="194.0" layoutY="12.0" text="Manage Employee" AnchorPane.topAnchor="12.0">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -24,35 +23,35 @@
             <HBox maxWidth="1.7976931348623157E308">
                <children>
                   <Label alignment="CENTER_RIGHT" minHeight="24.0" minWidth="78.0" text="ID : " />
-                  <TextField maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtId" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox maxWidth="1.7976931348623157E308">
                <children>
                   <Label alignment="CENTER_RIGHT" minHeight="24.0" minWidth="78.0" prefWidth="51.0" text="Name : " />
-                  <TextField maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox maxWidth="1.7976931348623157E308">
                <children>
                   <Label alignment="CENTER_RIGHT" minHeight="24.0" minWidth="78.0" prefHeight="16.0" prefWidth="77.0" text="Address : " />
-                  <TextField maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtAddress" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox spacing="10.0">
                <children>
                   <Label prefHeight="16.0" prefWidth="77.0" />
-                  <Button mnemonicParsing="false" text="SAVE" />
-                  <Button layoutX="87.0" layoutY="10.0" mnemonicParsing="false" text="DELETE" />
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOnAction" text="SAVE" />
+                  <Button fx:id="btnDelete" layoutX="87.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="DELETE" />
                </children>
             </HBox>
          </children>
       </VBox>
-      <TableView layoutX="21.0" layoutY="210.0" prefHeight="176.0" prefWidth="372.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <TableView fx:id="tblOrigin" layoutX="21.0" layoutY="210.0" prefHeight="176.0" prefWidth="372.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
-          <TableColumn prefWidth="57.0" text="ID" />
-          <TableColumn prefWidth="138.0" text="NAME" />
-            <TableColumn prefWidth="176.0" text="ADDRESS" />
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="140.0" text="NAME" />
+            <TableColumn prefWidth="187.0" text="ADDRESS" />
         </columns>
       </TableView>
    </children>

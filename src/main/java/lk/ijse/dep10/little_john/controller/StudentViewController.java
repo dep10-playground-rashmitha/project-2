@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.dep10.little_john.model.Student;
 
 public class StudentViewController {
 
@@ -20,7 +21,7 @@ public class StudentViewController {
     private Button btnSave;
 
     @FXML
-    private TableView<?> tblStudent;
+    private TableView<Student> tblStudent;
 
     @FXML
     private TextField txtAddress;
@@ -58,7 +59,10 @@ public class StudentViewController {
 
     }
     private String generateId(){
-        return "";
+        if(tblStudent.getItems().isEmpty())return "S001";
+        String id=tblStudent.getItems().get(tblStudent.getItems().size()-1).getId();
+        int newId=Integer.parseInt(id.substring(1))+1;
+        return String.format("S%3d",newId);
     }
 
 

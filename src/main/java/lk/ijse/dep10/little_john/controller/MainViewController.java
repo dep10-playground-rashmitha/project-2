@@ -2,7 +2,12 @@ package lk.ijse.dep10.little_john.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainViewController {
 
@@ -29,7 +34,13 @@ public class MainViewController {
     }
 
     @FXML
-    void btnStudentOnAction(ActionEvent event) {
+    void btnStudentOnAction(ActionEvent event) throws IOException {
+        Stage studentStage=(Stage) btnStudent.getScene().getWindow();
+        studentStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/StudentView.fxml"))));
+        studentStage.setTitle("Student Form");
+        studentStage.setResizable(false);
+        studentStage.show();
+        studentStage.centerOnScreen();
 
     }
 

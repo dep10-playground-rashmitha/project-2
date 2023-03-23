@@ -21,6 +21,17 @@ import java.util.Set;
 public class AppInitializer extends Application {
 
     public static void main(String[] args) {
+        Runtime.getRuntime().addShutdownHook(new Thread(()->{
+            try{
+                System.out.println("Database connection is about to close");
+                if(DBConnection.getInstance().getConnection()!=null &&
+                        !DBConnection.getInstance().getConnection().isClosed()) {
+                    DBConnection.getInstance().getConnection().close();
+                }
+            }catch (SQLException e){
+                throw new RuntimeException(e);
+            }
+        }));
         launch(args);
     }
 

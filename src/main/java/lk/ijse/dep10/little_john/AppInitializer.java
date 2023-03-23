@@ -67,7 +67,7 @@ public class AppInitializer extends Application {
                 stm.execute(readDBScript());
             }
 
-            System.out.println(tableExist);
+
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

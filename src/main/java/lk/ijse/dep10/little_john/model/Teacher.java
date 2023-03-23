@@ -1,24 +1,26 @@
 package lk.ijse.dep10.little_john.model;
 
-public class Employee {
-    private String id;
+import java.io.Serializable;
+
+public class Teacher implements Serializable {
+    private int id;
     private String name;
     private String address;
 
-    public Employee(String id, String name, String address) {
+    public Teacher() {
+    }
+
+    public Teacher(int id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
     }
 
-    public Employee() {
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

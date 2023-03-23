@@ -7,7 +7,6 @@
     <groupId>lk.ijse.dep10</groupId>
     <artifactId>team-project-2</artifactId>
     <version>0.1.0</version>
-
     <packaging>jar</packaging>
 
     <properties>

@@ -38,7 +38,13 @@ public class MainViewController {
     }
 
     @FXML
-    void btnStudentOnAction(ActionEvent event) {
+    void btnStudentOnAction(ActionEvent event) throws IOException {
+        Stage studentStage=(Stage) btnStudent.getScene().getWindow();
+        studentStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/StudentView.fxml"))));
+        studentStage.setTitle("Student Form");
+        studentStage.setResizable(false);
+        studentStage.show();
+        studentStage.centerOnScreen();
 
     }
 

@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="519.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CustomerView">
+<AnchorPane prefHeight="519.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.little_john.controller.CustomerViewController">
    <children>
       <Button fx:id="btnNewCustomer" disable="true" layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnNewCustomer" text="+NEW CUSTOMER" />
       <Label layoutX="193.0" layoutY="22.0" text="MANAGE CUSTOMERS">

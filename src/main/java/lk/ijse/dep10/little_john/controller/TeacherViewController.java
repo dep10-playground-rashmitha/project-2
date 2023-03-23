@@ -44,6 +44,7 @@ public class TeacherViewController {
     private TextField txtName;
 
     public void initialize() {
+        System.out.println("initialize");
         btnDelete.setDisable(true);
         tblTeacher.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
         tblTeacher.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));

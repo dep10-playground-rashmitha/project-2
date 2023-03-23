@@ -7,8 +7,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dep10.little_john.db.DBConnection;
 
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class CustomerViewController {
 
@@ -40,6 +43,14 @@ public class CustomerViewController {
         loadAllCustomer();
     }
     private void loadAllCustomer(){
+        Connection connection= DBConnection.getInstance().getConnection();
+        try {
+            Statement stm = connection.createStatement();
+            stm.executeQuery("SELECT *FROM ");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

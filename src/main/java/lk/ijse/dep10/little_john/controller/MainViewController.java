@@ -23,6 +23,10 @@ public class MainViewController {
     @FXML
     private Button btnTeachers;
 
+    public void initialize() {
+
+    }
+
     @FXML
     void btnCustomersOnAction(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
@@ -40,13 +44,22 @@ public class MainViewController {
     }
 
     @FXML
-    void btnStudentOnAction(ActionEvent event) {
+    void btnStudentOnAction(ActionEvent event) throws IOException {
+        Stage studentStage=(Stage) btnStudent.getScene().getWindow();
+        studentStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/StudentView.fxml"))));
+        studentStage.setTitle("Student Form");
+        studentStage.setResizable(false);
+        studentStage.show();
+        studentStage.centerOnScreen();
 
     }
 
     @FXML
-    void btnTeachersOnAction(ActionEvent event) {
-
+    void btnTeachersOnAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/TeacherView.fxml"))));
+        stage.centerOnScreen();
+        stage.show();
     }
 
 }

@@ -3,24 +3,24 @@ package lk.ijse.dep10.little_john.model;
 import java.io.Serializable;
 
 public class Teacher implements Serializable {
-    private int id;
+    private String id;
     private String name;
     private String address;
 
     public Teacher() {
     }
 
-    public Teacher(int id, String name, String address) {
+    public Teacher(String id, String name, String address) {
         this.id = id;
         this.name = name;
         this.address = address;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

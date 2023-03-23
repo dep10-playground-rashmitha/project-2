@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.little_john.controller.StudentViewController">
    <children>
       <HBox alignment="CENTER" layoutX="27.0" layoutY="28.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
@@ -33,7 +32,7 @@
             <HBox alignment="CENTER" spacing="15.0">
                <children>
                   <Label alignment="CENTER_RIGHT" minWidth="61.0" text="Id  :" />
-                  <TextField fx:id="txtId" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtId" editable="false" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox alignment="CENTER" spacing="15.0">

@@ -34,8 +34,13 @@ public class MainViewController {
     }
 
     @FXML
-    void btnEmployeeOnAction(ActionEvent event) {
-
+    void btnEmployeeOnAction(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/EmployeeView.fxml"))));
+        stage.setTitle("Employee Form");
+        stage.setResizable(false);
+        stage.show();
+        stage.centerOnScreen();
     }
 
     @FXML

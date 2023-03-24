@@ -47,7 +47,7 @@
             </HBox>
          </children>
       </VBox>
-      <TableView fx:id="tblOrigin" layoutX="21.0" layoutY="210.0" prefHeight="176.0" prefWidth="372.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <TableView fx:id="tblEmployee" layoutX="21.0" layoutY="210.0" prefHeight="176.0" prefWidth="372.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
           <TableColumn prefWidth="140.0" text="NAME" />

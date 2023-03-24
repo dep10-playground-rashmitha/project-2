@@ -29,7 +29,13 @@ public class MainViewController {
     }
 
     @FXML
-    void btnCustomersOnAction(ActionEvent event) {
+    void btnCustomersOnAction(ActionEvent event) throws IOException {
+        Stage primaryStage = new Stage();
+        primaryStage.setScene(new Scene(new FXMLLoader(getClass().getResource("/view/CustomerView.fxml")).load()));
+        primaryStage.centerOnScreen();
+        primaryStage.setTitle("CustomerView");
+        primaryStage.show();
+
 
     }
 

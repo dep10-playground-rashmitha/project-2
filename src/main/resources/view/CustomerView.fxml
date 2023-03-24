@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="519.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.little_john.controller.CustomerViewController">
+   <children>
+      <Button fx:id="btnNewCustomer" layoutX="23.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnNewCustomer" text="+NEW CUSTOMER" />
+      <Label layoutX="193.0" layoutY="22.0" text="MANAGE CUSTOMERS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <HBox layoutX="130.0" layoutY="227.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="80.0" text="SAVE" />
+            <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="80.0" text="DELETE" />
+         </children>
+      </HBox>
+      <VBox layoutX="50.0" layoutY="92.0" spacing="20.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefWidth="80.0" text="ID :" />
+                  <TextField fx:id="txtId" disable="true" prefHeight="24.0" prefWidth="403.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="80.0" text="NAME :" />
+                  <TextField fx:id="txtName" disable="true" prefHeight="24.0" prefWidth="403.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefWidth="80.0" text="ADDRESS" />
+                  <TextField fx:id="txtAddress" disable="true" prefHeight="24.0" prefWidth="403.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tblCustomer" layoutX="48.0" layoutY="279.0" onMousePressed="#tblCustomer" prefHeight="200.0" prefWidth="483.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="69.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="178.0" text="NAME" />
+            <TableColumn prefWidth="229.0" text="ADDRESS" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

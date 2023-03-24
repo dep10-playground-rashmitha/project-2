@@ -83,7 +83,7 @@ public class StudentViewController {
         Connection connection = DBConnection.getInstance().getConnection();
         try {
             Statement stm = connection.createStatement();
-            stm.executeUpdate("DELETE FROM Students WHERE id='id'");
+            stm.executeUpdate("DELETE FROM Students WHERE id='"+id+"'");
             Student selectStudent = tblStudent.getSelectionModel().getSelectedItem();
             tblStudent.getItems().remove(selectStudent);
             if(tblStudent.getSelectionModel().isEmpty()){
